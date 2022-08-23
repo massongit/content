@@ -42,4 +42,4 @@ jobs:
         if: steps.changed-files.outputs.any_changed == 'true'
         run: |
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
-          markdownlint ${{ steps.changed-files.outputs.all_changed_files }}
+          npx markdownlint ${{ steps.changed-files.outputs.all_changed_files }}
