@@ -33,9 +33,13 @@ jobs:
           node-version: "16"
           cache: yarn
 
+      - name: Install all yarn packages
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          yarn --frozen-lockfile
+
       - name: Lint markdown files
         if: steps.changed-files.outputs.any_changed == 'true'
         run: |
-          npm install --location=global markdownlint-cli
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
           markdownlint ${{ steps.changed-files.outputs.all_changed_files }}
