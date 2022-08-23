@@ -38,8 +38,4 @@ jobs:
         run: |
           npm install --location=global markdownlint-cli
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
-          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            if [[ $file == *\.md ]]; then
-              markdownlint $file
-            fi
-          done
+          markdownlint ${{ steps.changed-files.outputs.all_changed_files }}
