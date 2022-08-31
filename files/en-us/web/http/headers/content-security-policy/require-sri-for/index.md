@@ -9,9 +9,11 @@ tags:
   - Security
   - Subresource Integrity
   - require-sri-for
+  - Deprecated
+  - Non-standard
 browser-compat: http.headers.Content-Security-Policy.require-sri-for
 ---
-{{deprecated_header}}
+{{HTTPSidebar}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The [HTTP](/en-US/docs/Web/HTTP) {{HTTPHeader("Content-Security-Policy")}}
 **`require-sri-for`** directive instructs the client to require

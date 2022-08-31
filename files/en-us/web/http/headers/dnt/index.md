@@ -6,9 +6,10 @@ tags:
   - HTTP
   - Reference
   - header
+  - Deprecated
 browser-compat: http.headers.DNT
 ---
-{{HTTPSidebar}}{{Deprecated_header}}
+{{HTTPSidebar}}{{Deprecated_Header}}
 
 The **`DNT`** (**D**o **N**ot
 **T**rack) request header indicates the user's tracking preference. It lets

@@ -7,9 +7,10 @@ tags:
   - HTTP
   - Reference
   - Security
+  - Deprecated
 browser-compat: http.headers.Content-Security-Policy.report-uri
 ---
-{{HTTPSidebar}}{{deprecated_header}}
+{{HTTPSidebar}}{{Deprecated_Header}}
 
 The deprecated HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`report-uri`** directive instructs the user agent to report

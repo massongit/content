@@ -8,9 +8,10 @@ tags:
   - Response
   - header
   - tracking
+  - Deprecated
 browser-compat: http.headers.Tk
 ---
-{{HTTPSidebar}}{{Deprecated_header}}
+{{HTTPSidebar}}{{Deprecated_Header}}
 
 The **`Tk`** response header indicates the tracking status that
 applied to the corresponding request.
