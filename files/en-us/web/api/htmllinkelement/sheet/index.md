@@ -4,6 +4,7 @@ slug: Web/API/HTMLLinkElement/sheet
 page-type: web-api-instance-property
 browser-compat: api.HTMLLinkElement.sheet
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`sheet`** property of the {{domxref("HTMLLinkElement")}} interface

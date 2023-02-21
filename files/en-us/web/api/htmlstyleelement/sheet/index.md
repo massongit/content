@@ -4,6 +4,7 @@ slug: Web/API/HTMLStyleElement/sheet
 page-type: web-api-instance-property
 browser-compat: api.HTMLStyleElement.sheet
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`sheet`** property of the {{domxref("HTMLStyleElement")}} interface
