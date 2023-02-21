@@ -5,6 +5,7 @@ page-type: web-api-instance-property
 ---
 
 {{APIRef("SVG")}}
+
 The [x](https://svgwg.org/svg2-draft/geometry.html#XProperty) property describes the horizontal coordinate of the position of the element.
 
 ## Usage context

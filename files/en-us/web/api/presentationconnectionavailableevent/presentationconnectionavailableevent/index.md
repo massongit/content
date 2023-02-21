@@ -8,6 +8,7 @@ browser-compat: api.PresentationConnectionAvailableEvent.PresentationConnectionA
 ---
 
 {{DefaultAPISidebar("Presentation API")}}{{SeeCompatTable}}
+
 The **`PresentationConnectionAvailableEvent()`** constructor creates a new {{domxref("PresentationConnectionAvailableEvent")}} object.
 
 ## Syntax

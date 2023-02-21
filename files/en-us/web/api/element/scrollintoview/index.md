@@ -35,7 +35,6 @@ scrollIntoView(scrollIntoViewOptions)
       `scrollIntoViewOptions: {block: "end", inline: "nearest"}`.
 
 - `scrollIntoViewOptions` {{optional_inline}}
-  {{experimental_inline}}
 
   - : An Object with the following properties:
 
