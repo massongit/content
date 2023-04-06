@@ -2,10 +2,12 @@
 title: ArrayBuffer.prototype.resizable
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resizable
 page-type: javascript-instance-accessor-property
+status:
+  - experimental
 browser-compat: javascript.builtins.ArrayBuffer.resizable
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`resizable`** accessor property of {{jsxref("ArrayBuffer")}} instances represents whether the `ArrayBuffer` can be resized or not.
 

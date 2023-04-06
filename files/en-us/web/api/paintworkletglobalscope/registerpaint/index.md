@@ -2,12 +2,10 @@
 title: PaintWorkletGlobalScope.registerPaint()
 slug: Web/API/PaintWorkletGlobalScope/registerPaint
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.PaintWorkletGlobalScope.registerPaint
 ---
 
-{{APIRef("CSS Painting API")}}{{SeeCompatTable}}
+{{APIRef("CSS Painting API")}}
 
 The **`registerPaint()`** method of the
 {{domxref("PaintWorkletGlobalScope")}} interface registers a class to programmatically generate an

@@ -2,10 +2,12 @@
 title: color-mix()
 slug: Web/CSS/color_value/color-mix
 page-type: css-function
+status:
+  - experimental
 browser-compat: css.types.color.color-mix
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`color-mix()`** functional notation takes two {{cssxref("color_value","&lt;color>")}} values and returns the result of mixing them in a given colorspace by a given amount.
 

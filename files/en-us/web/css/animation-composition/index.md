@@ -2,10 +2,12 @@
 title: animation-composition
 slug: Web/CSS/animation-composition
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.animation-composition
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`animation-composition`** [CSS](/en-US/docs/Web/CSS) property specifies the {{Glossary("composite operation")}} to use when multiple animations affect the same property simultaneously.
 
