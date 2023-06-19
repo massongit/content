@@ -1,13 +1,10 @@
 ---
 title: Expires
 slug: Web/HTTP/Headers/Expires
-tags:
-  - Caching
-  - HTTP
-  - Response
-  - header
+page-type: http-header
 browser-compat: http.headers.Expires
 ---
+
 {{HTTPSidebar}}
 
 The **`Expires`** HTTP header contains the date/time after which the

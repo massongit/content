@@ -2,26 +2,20 @@
 title: FileSystemWritableFileStream
 slug: Web/API/FileSystemWritableFileStream
 page-type: web-api-interface
-tags:
-  - File
-  - File System Access API
-  - FileSystemWritableFileStream
-  - Interface
-  - stream
-  - write file
 browser-compat: api.FileSystemWritableFileStream
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System Access API")}}
 
 The **`FileSystemWritableFileStream`** interface of the {{domxref('File System Access API')}} is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk. The interface is accessed through the {{domxref('FileSystemFileHandle.createWritable()')}} method.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("WritableStream")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("WritableStream")}}._
 
@@ -40,7 +34,6 @@ A user defined {{domxref('Blob')}} is then written to the stream which is subseq
 
 ```js
 async function saveFile() {
-
   // create a new handle
   const newHandle = await window.showSaveFilePicker();
 

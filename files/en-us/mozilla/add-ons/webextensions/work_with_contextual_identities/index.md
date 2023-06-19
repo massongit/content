@@ -1,14 +1,9 @@
 ---
 title: Work with contextual identities
 slug: Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
-tags:
-  - Add-ons
-  - Beginner
-  - Contextual identities
-  - Extensions
-  - How-to
-  - WebExtensions
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 Many people need or want to interact with the web using multiple personas. They may have accounts for web-based work and personal email. They might sign out of their social media accounts before accessing online shopping, to ensure that any tracking scripts on the shopping sites can't pick up their social media activity. To address these requirements, users often end up working with a standard and private browser window or two different browsers.
@@ -57,7 +52,6 @@ The main features of the [manifest.json](https://github.com/mdn/webextensions-ex
 
   ```json
     "browser_action": {
-      "browser_style": true,
       "default_title": "Contextual Identities",
       "default_popup": "context.html",
       "default_icon": {
@@ -109,7 +103,7 @@ The script now uses contextualIdentities.query to determine whether there are an
       }
 ```
 
-If there are contextual identities present—Firefox comes with four default identities—the script loops through each one adding its name, styled in its chosen color, to the \<div> element. The function `createOptions()` then adds the options to "create" or "close all" to the \<div> before it's added to the popup.
+If there are contextual identities present—Firefox comes with four default identities—the script loops through each one adding its name, styled in its chosen color, to the `<div>` element. The function `createOptions()` then adds the options to "create" or "close all" to the `<div>` before it's added to the popup.
 
 ```js
      for (const identity of identities) {

@@ -1,13 +1,12 @@
 ---
 title: DNT
 slug: Web/HTTP/Headers/DNT
-tags:
-  - DNT
-  - HTTP
-  - Reference
-  - header
+page-type: http-header
+status:
+  - deprecated
 browser-compat: http.headers.DNT
 ---
+
 {{HTTPSidebar}}{{Deprecated_header}}
 
 The **`DNT`** (**D**o **N**ot
@@ -52,7 +51,7 @@ The user's DNT preference can also be read from JavaScript using the
 {{domxref("Navigator.doNotTrack")}} property:
 
 ```js
-navigator.doNotTrack; // "0" or "1"
+navigator.doNotTrack; // "0", "1" or null
 ```
 
 ## Specifications

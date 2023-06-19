@@ -1,18 +1,11 @@
 ---
-title: SpeechRecognitionEvent.results
+title: "SpeechRecognitionEvent: results property"
+short-title: results
 slug: Web/API/SpeechRecognitionEvent/results
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechRecognitionEvent
-  - Web Speech API
-  - recognition
-  - results
-  - speech
 browser-compat: api.SpeechRecognitionEvent.results
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`results`** read-only property of the
@@ -34,7 +27,7 @@ A {{domxref("SpeechRecognitionResultList")}} object.
 ## Examples
 
 This code is excerpted from our
-[Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+[Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = (event) => {
@@ -49,7 +42,7 @@ recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
-}
+};
 ```
 
 ## Specifications

@@ -1,11 +1,9 @@
 ---
 title: last
 slug: Web/XPath/Functions/last
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `last` function returns a number equal to the context size from the expression evaluation context.
 

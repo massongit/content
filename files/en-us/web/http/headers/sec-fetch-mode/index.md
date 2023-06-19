@@ -1,15 +1,10 @@
 ---
 title: Sec-Fetch-Mode
 slug: Web/HTTP/Headers/Sec-Fetch-Mode
-tags:
-  - Sec-Fetch-Mode
-  - Fetch Metadata Request Headers
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
+page-type: http-header
 browser-compat: http.headers.Sec-Fetch-Mode
 ---
+
 {{HTTPSidebar}}
 
 The **`Sec-Fetch-Mode`** {{Glossary("Fetch metadata request header", "fetch metadata request header")}} indicates the [mode](/en-US/docs/Web/API/Request/mode) of the request.

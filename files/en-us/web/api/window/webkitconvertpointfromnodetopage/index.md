@@ -1,22 +1,14 @@
 ---
-title: Window.convertPointFromNodeToPage()
+title: "Window: convertPointFromNodeToPage() method"
+short-title: convertPointFromNodeToPage()
 slug: Web/API/Window/webkitConvertPointFromNodeToPage
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Point
-  - Reference
-  - Safari
-  - WebKit
-  - Window
+status:
+  - non-standard
 browser-compat: api.Window.convertPointFromNodeToPage
 ---
-{{APIRef}}
 
-{{Non-standard_header}}
+{{APIRef}}{{Non-standard_header}}
 
 Given a {{domxref("WebKitPoint")}} specified in a particular DOM {{domxref("Node")}}'s
 coordinate system, the {{domxref("Window")}} method
@@ -29,7 +21,7 @@ non-standard and _should not be used_.
 
 ## Syntax
 
-```js
+```js-nolint
 convertPointFromNodeToPage(node, nodePoint)
 ```
 
@@ -58,4 +50,4 @@ current CSS Transforms Module Level 1 Working Draft.
 ## See also
 
 - {{domxref("Window.webkitConvertPointFromPageToNode")}}
-- Mozilla implementation bug: {{bug(850806)}}
+- Mozilla implementation bug: [Firefox bug 850806](https://bugzil.la/850806)

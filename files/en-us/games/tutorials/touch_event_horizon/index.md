@@ -1,10 +1,8 @@
 ---
 title: Touch Event Horizon
 slug: Games/Tutorials/Touch_Event_Horizon
-tags:
-  - NeedsContent
-  - NeedsExample
 ---
+
 {{GamesSidebar}}
 
 This article is for Touch Event Horizon and A Game Related To It

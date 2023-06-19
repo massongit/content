@@ -2,17 +2,12 @@
 title: DirectoryEntrySync
 slug: Web/API/DirectoryEntrySync
 page-type: web-api-interface
-tags:
-  - API
-  - File API
-  - File and Directory Entries API
-  - Offline
-  - Reference
-  - filesystem
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.DirectoryEntrySync
 ---
+
 {{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 The `DirectoryEntrySync` interface represents a directory in a file system. It includes methods for creating, reading, looking up, and recursively removing files in a directory.
@@ -24,18 +19,18 @@ The `DirectoryEntrySync` interface represents a directory in a file system. It i
 
 If you want to create subdirectories, you have to create each child directory in sequence. If you try to create a directory using a full path that includes parent directories that do not exist yet, you get an error. So create the hierarchy by recursively adding a new path after creating the parent directory.
 
-#### Example
+### Example
 
 The `getFile()` method returns a `FileEntrySync`, which represents a file in the file system. The following creates an empty file called `logs.txt` in the root directory.
 
 ```js
-const fileEntry = fs.root.getFile('logs.txt', {create: true});
+const fileEntry = fs.root.getFile("logs.txt", { create: true });
 ```
 
 The `getDirectory()` method returns a `DirectoryEntrySync`, which represents a file in the file system. The following creates a new directory called `project_dir` in the root directory.
 
 ```js
-const dirEntry = fs.root.getDirectory('project_dir', {create: true});
+const dirEntry = fs.root.getDirectory("project_dir", { create: true });
 ```
 
 ## Method overview
@@ -45,7 +40,7 @@ const dirEntry = fs.root.getDirectory('project_dir', {create: true});
 - <a href="#getdirectory">getDirectory()</a>
 - <a href="#removerecursively">removeRecursively()</a>
 
-## Methods
+## Instance methods
 
 ### createReader()
 
@@ -53,8 +48,8 @@ Creates a new `DirectoryReaderSync` to read entries from this directory.
 
 #### Syntax
 
-```
-createReader()
+```js
+createReader();
 ```
 
 ##### Returns

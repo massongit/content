@@ -1,15 +1,11 @@
 ---
-title: 'Window: deviceorientationabsolute event'
+title: "Window: deviceorientationabsolute event"
+short-title: deviceorientationabsolute
 slug: Web/API/Window/deviceorientationabsolute_event
 page-type: web-api-event
-tags:
-  - API
-  - Device Orientation
-  - Mobile
-  - Orientation
-  - Event
 browser-compat: api.Window.deviceorientationabsolute_event
 ---
+
 {{ApiRef}}
 
 The **`deviceorientationabsolute`** event is sent to the `ondeviceorientationabsolute` event handler on a {{domxref('Window')}} event when absolute device orientation changes.
@@ -21,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('deviceorientationabsolute', (event) => { });
+addEventListener("deviceorientationabsolute", (event) => {});
 
-ondeviceorientationabsolute = (event) => { };
+ondeviceorientationabsolute = (event) => {};
 ```
 
 ## Event type
@@ -60,4 +56,4 @@ A {{domxref("DeviceOrientationEvent")}}. Inherits from {{domxref("Event")}}.
 - {{domxref("Window.deviceorientation_event", "deviceorientation")}}
 - {{ domxref("DeviceOrientationEvent") }}
 - {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
-- [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
+- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)

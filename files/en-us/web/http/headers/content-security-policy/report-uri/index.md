@@ -1,14 +1,12 @@
 ---
-title: 'CSP: report-uri'
+title: "CSP: report-uri"
 slug: Web/HTTP/Headers/Content-Security-Policy/report-uri
-tags:
-  - CSP
-  - Directive
-  - HTTP
-  - Reference
-  - Security
+page-type: http-csp-directive
+status:
+  - deprecated
 browser-compat: http.headers.Content-Security-Policy.report-uri
 ---
+
 {{HTTPSidebar}}{{deprecated_header}}
 
 The deprecated HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)

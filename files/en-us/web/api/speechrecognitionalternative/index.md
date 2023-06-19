@@ -2,21 +2,14 @@
 title: SpeechRecognitionAlternative
 slug: Web/API/SpeechRecognitionAlternative
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SpeechRecognitionAlternative
-  - Web Speech API
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionAlternative
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`SpeechRecognitionAlternative`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a single word that has been recognized by the speech recognition service.
 
-## Properties
+## Instance properties
 
 - {{domxref("SpeechRecognitionAlternative.transcript")}} {{ReadOnlyInline}}
   - : Returns a string containing the transcript of the recognized word.
@@ -26,7 +19,7 @@ The **`SpeechRecognitionAlternative`** interface of the [Web Speech API](/en-US/
 ## Examples
 
 This code is excerpted from our
-[Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+[Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = (event) => {
@@ -42,7 +35,7 @@ recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
-}
+};
 ```
 
 ## Specifications

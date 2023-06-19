@@ -1,18 +1,9 @@
 ---
-title: Sharing objects with page scripts
+title: Share objects with page scripts
 slug: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
-tags:
-  - Add-ons
-  - Content script
-  - Extensions
-  - Firefox
-  - Guide
-  - Mozilla
-  - Non-standard
-  - WebExtensions
-  - XPCOM
-  - page scripts
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 > **Note:** The techniques described in this section are only available in Firefox, and only from Firefox 49 onwards.
@@ -48,7 +39,7 @@ Let's take a simple example. Suppose a web page loads a script:
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
   </head>
   <body>
     <script src="main.js"></script>
@@ -146,10 +137,10 @@ Define a function in the content script's scope, then export it
 into the page script's scope.
 */
 function notify(message) {
-  browser.runtime.sendMessage({content: `Function call: ${message}`});
+  browser.runtime.sendMessage({ content: `Function call: ${message}` });
 }
 
-exportFunction(notify, window, {defineAs:'notify'});
+exportFunction(notify, window, { defineAs: "notify" });
 ```
 
 This defines a function `notify()`, which just sends its argument to the background script. It then exports the function to the page script's scope. Now the page script can call this function:
@@ -225,8 +216,17 @@ window.eval(`
   console.log(objA instanceof Object);           // false
   console.log(objB instanceof Object);           // true
 
-  console.log(objA.foo);                         // undefined
-  objA.baz = "baz";                              // Error: permission denied
+  try {
+    console.log(objA.foo);
+  } catch (error) {
+    console.log(error);                       // Error: permission denied
+  }
+ 
+  try {
+    objA.baz = "baz";
+  } catch (error) {
+    console.log(error);                       // Error: permission denied
+  }
 
   console.log(objB.foo, objB.bar);               // "foo", "bar"
   objB.baz = "baz";
@@ -247,9 +247,9 @@ ev.propB = "wrapper";                             // define property on xray wra
 ev.wrappedJSObject.propB = "unwrapped";           // define same property on page object
 Reflect.defineProperty(ev.wrappedJSObject,        // privileged reflection can operate on less privileged objects
   'propC', {
-     get: exportFunction(() => {                  // getters must be exported like regular functions
-       return 'propC';
-     })
+    get: exportFunction(() => {                  // getters must be exported like regular functions
+      return 'propC';
+    }, window)
   }
 );
 
@@ -267,12 +267,12 @@ document.dispatchEvent(ev); // true, undefined, "unwrapped", "propC"
 A Promise cannot be cloned directly using `cloneInto`, as Promise is not supported by the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). However, the desired result can be achieved using `window.Promise` instead of `Promise`, and then cloning the resolution value like this:
 
 ```js
-let promise = new window.Promise(resolve => {
+const promise = new window.Promise((resolve) => {
   // if just a primitive, then cloneInto is not needed:
   // resolve("string is a primitive");
 
   // if not a primitive, such as an object, then the value must be cloned
-  let result = { exampleKey: "exampleValue" };
+  const result = { exampleKey: "exampleValue" };
   resolve(cloneInto(result, window));
 });
 // now the promise can be passed to the web page

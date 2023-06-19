@@ -1,16 +1,17 @@
-name: Markdown lint (project files)
+name: Markdownlint (All files)
 
 on:
   pull_request:
     branches:
       - main
     paths:
-      - .markdownlint.json
+      - .markdownlint-cli2.jsonc
+      - .nvmrc
+      - .prettier*
+      - package.json
       - yarn.lock
-      - '**/*.md'
       - .github/workflows/markdown-lint.yml
       - .github/workflows/markdownlint-problem-matcher.json
-
 
 jobs:
   docs:
@@ -30,16 +31,15 @@ jobs:
         if: steps.changed-files.outputs.any_changed == 'true'
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages
-        if: steps.changed-files.outputs.any_changed == 'true'
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - name: Lint markdown files
         if: steps.changed-files.outputs.any_changed == 'true'
         run: |
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
-          npx markdownlint ${{ steps.changed-files.outputs.all_changed_files }}
+          yarn lint:md
+          yarn lint:fm

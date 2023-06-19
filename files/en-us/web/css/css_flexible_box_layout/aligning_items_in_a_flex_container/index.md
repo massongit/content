@@ -1,19 +1,9 @@
 ---
 title: Aligning items in a flex container
-slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
-tags:
-  - Align
-  - CSS
-  - Flex
-  - Guide
-  - align-content
-  - align-items
-  - align-self
-  - alignment
-  - flexbox
-  - justify
-  - justify-content
+slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
+page-type: guide
 ---
+
 {{CSSRef}}
 
 One of the reasons that flexbox quickly caught the interest of web developers is that it brought proper alignment capabilities to the web for the first time. It enabled proper vertical alignment, so we can at last easily center a box. In this guide, we will take a thorough look at how the alignment and justification properties work in Flexbox.
@@ -195,6 +185,6 @@ To create a gap between flex items, use the {{cssxref("gap")}}, {{cssxref("colum
 
 ## See also
 
-- [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
-- [Box Alignment in Flexbox](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [Box Alignment in Grid Layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)
+- [Box alignment](/en-US/docs/Web/CSS/CSS_box_alignment)
+- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)

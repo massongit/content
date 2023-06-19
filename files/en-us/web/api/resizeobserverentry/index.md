@@ -2,23 +2,14 @@
 title: ResizeObserverEntry
 slug: Web/API/ResizeObserverEntry
 page-type: web-api-interface
-tags:
-  - API
-  - Bounding Box
-  - Interface
-  - Reference
-  - Resize Observer API
-  - ResizeObserver
-  - ResizeObserverEntry
-  - content box
-  - observers
 browser-compat: api.ResizeObserverEntry
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`ResizeObserverEntry`** interface represents the object passed to the {{domxref('ResizeObserver.ResizeObserver','ResizeObserver()')}} constructor's callback function, which allows you to access the new dimensions of the {{domxref("Element")}} or {{domxref("SVGElement")}} being observed.
 
-## Properties
+## Instance properties
 
 - {{domxref('ResizeObserverEntry.borderBoxSize')}} {{ReadOnlyInline}}
   - : An object containing the new border box size of the observed element when the callback is run.
@@ -33,22 +24,31 @@ The **`ResizeObserverEntry`** interface represents the object passed to the {{do
 
 > **Note:** The content box is the box in which content can be placed, meaning the border box minus the padding and border width. The border box encompasses the content, padding, and border. See [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) for further explanation.
 
-## Methods
+## Instance methods
 
 None.
 
 ## Examples
 
-The following snippet is taken from the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([see source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example. This uses a simple feature detection test to see if the browser supports the newer `contentBoxSize` property — if so, it uses that to get the sizing data it needs. If not, it uses the older `contentRect` property.
+The following snippet is taken from the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([see source](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)) example. This uses a simple feature detection test to see if the browser supports the newer `contentBoxSize` property — if so, it uses that to get the sizing data it needs. If not, it uses the older `contentRect` property.
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
   for (const entry of entries) {
     if (entry.contentBoxSize) {
-      h1Elem.style.fontSize = `${Math.max(1.5, entry.contentBoxSize.inlineSize / 200)}rem`;
-      pElem.style.fontSize = `${Math.max(1, entry.contentBoxSize.inlineSize / 600)}rem`;
+      h1Elem.style.fontSize = `${Math.max(
+        1.5,
+        entry.contentBoxSize.inlineSize / 200
+      )}rem`;
+      pElem.style.fontSize = `${Math.max(
+        1,
+        entry.contentBoxSize.inlineSize / 600
+      )}rem`;
     } else {
-      h1Elem.style.fontSize = `${Math.max(1.5, entry.contentRect.width / 200)}rem`;
+      h1Elem.style.fontSize = `${Math.max(
+        1.5,
+        entry.contentRect.width / 200
+      )}rem`;
       pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
     }
   }

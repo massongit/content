@@ -1,11 +1,9 @@
 ---
-title: 'true'
+title: "true"
 slug: Web/XPath/Functions/true
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `true` function returns a boolean value of true.
 

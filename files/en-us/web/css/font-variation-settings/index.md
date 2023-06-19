@@ -1,14 +1,10 @@
 ---
 title: font-variation-settings
 slug: Web/CSS/font-variation-settings
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-variation-settings
 ---
+
 {{CSSRef}}
 
 The **`font-variation-settings`** CSS property provides low-level control over [variable font](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide) characteristics, by specifying the four letter axis names of the characteristics you want to vary, along with their values.
@@ -39,7 +35,7 @@ This property's value can take one of two forms:
 - `normal`
   - : Text is laid out using default settings.
 - `<string> <number>`
-  - : When rendering text, the list of variable font axis names is passed to the text layout engine to enable or disable font features. Each setting is always one or more pairs consisting of a {{cssxref("&lt;string&gt;")}} of 4 ASCII characters followed by a {{cssxref("number")}} indicating the axis value to set. If the `<string>` has more or fewer characters or contains characters outside the U+20 - U+7E codepoint range, the whole property is invalid. The `<number>` can be fractional or negative, depending on the value range available in your font, as defined by the font designer.
+  - : When rendering text, the list of variable font axis names is passed to the text layout engine to enable or disable font features. Each setting is always one or more pairs consisting of a {{cssxref("&lt;string&gt;")}} of 4 ASCII characters followed by a {{cssxref("number")}} indicating the axis value to set. If the `<string>` has more or fewer characters or contains characters outside the U+20 - U+7E code point range, the whole property is invalid. The `<number>` can be fractional or negative, depending on the value range available in your font, as defined by the font designer.
 
 ## Description
 
@@ -127,5 +123,5 @@ The following live example's CSS can be edited to allow you to play with font sl
 ## See also
 
 - [Variable fonts guide](/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
-- [OpenType Font Variations Overview](https://docs.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
-- [OpenType Design-Variation Axis Tag Registry](https://docs.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg)
+- [OpenType Font Variations Overview](https://docs.microsoft.com/typography/opentype/spec/otvaroverview)
+- [OpenType Design-Variation Axis Tag Registry](https://docs.microsoft.com/typography/opentype/spec/dvaraxisreg)

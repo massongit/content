@@ -1,16 +1,13 @@
 ---
 title: NEL
 slug: Web/HTTP/Headers/NEL
-tags:
-  - HTTP
-  - HTTP Header
-  - Network Error Logging
-  - Reference
-  - Response Header
-  - header
+page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.NEL
 ---
-{{HTTPSidebar}}
+
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP **`NEL`** response header is used to configure network request logging.
 

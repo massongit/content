@@ -1,17 +1,10 @@
 ---
 title: Link
 slug: Web/HTTP/Headers/Link
-tags:
-  - Draft
-  - HTTP
-  - HTTP Header
-  - Link
-  - NeedsCompatTable
-  - NeedsContent
-  - NeedsSyntax
-  - Reference
+page-type: http-header
 browser-compat: http.headers.Link
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Link`** entity-header field provides a means for serializing one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
@@ -23,7 +16,7 @@ Link: <uri-reference>; param1=value1; param2="value2"
 ```
 
 - `<uri-reference>`
-  - : The URI reference, must be enclosed between `<` and `>` and [percent encoded](/en-US/docs/Glossary/percent-encoding).
+  - : The URI reference, must be enclosed between `<` and `>` and [URL encoded](https://en.wikipedia.org/wiki/URL_encoding).
 
 ### Parameters
 

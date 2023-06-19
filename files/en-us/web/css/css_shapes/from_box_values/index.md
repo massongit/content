@@ -1,22 +1,9 @@
 ---
 title: Shapes from box values
-slug: Web/CSS/CSS_Shapes/From_box_values
-tags:
-  - Boundaries
-  - Boxes
-  - CSS
-  - CSS Shapes
-  - Guide
-  - Margins
-  - border-box
-  - border-radius
-  - box values
-  - content-box
-  - float
-  - margin-box
-  - padding-box
-  - shapes
+slug: Web/CSS/CSS_shapes/From_box_values
+page-type: guide
 ---
+
 {{CSSRef}}
 
 A straightforward way to create a shape is to use a value from the CSS Box Model. This article explains how to do this.
@@ -74,4 +61,4 @@ You can create some interesting effects however with just this simple technique.
 
 {{EmbedGHLiveSample("css-examples/shapes/box/bottom-margin-box.html", '100%', 800)}}
 
-For more complex shapes, you will need to use one of the [basic shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) as a value, or define your shape from an image as covered in other guides in this section.
+For more complex shapes, you will need to use one of the [basic shapes](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) as a value, or define your shape from an image as covered in other guides in this section.

@@ -1,15 +1,11 @@
 ---
-title: 'MediaKeySession: message event'
+title: "MediaKeySession: message event"
+short-title: message
 slug: Web/API/MediaKeySession/message_event
 page-type: web-api-event
-tags:
-  - message
-  - API
-  - Event
-  - Reference
-  - MediaKeySession
 browser-compat: api.MediaKeySession.message_event
 ---
+
 {{APIRef("Encrypted Media Extensions")}}
 
 The **`message`** event of the
@@ -21,14 +17,14 @@ content decryption module.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', (event) => { });
+addEventListener("message", (event) => {});
 
-onmessage = (event) => { };
+onmessage = (event) => {};
 ```
 
 ## Event type
 
-An {{domxref("MediaKeyMessageEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MediaKeyMessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaKeyMessageEvent")}}
 

@@ -1,44 +1,35 @@
 ---
 title: Intl.DateTimeFormat() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
-tags:
-  - Constructor
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
 ---
+
 {{JSRef}}
 
-The **`Intl.DateTimeFormat()`** constructor creates
-{{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} objects that enable
-language-sensitive date and time formatting.
+The **`Intl.DateTimeFormat()`** constructor creates {{jsxref("Intl.DateTimeFormat")}} objects.
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat.html", "taller")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Syntax
 
-```js
+```js-nolint
 new Intl.DateTimeFormat()
 new Intl.DateTimeFormat(locales)
 new Intl.DateTimeFormat(locales, options)
+
+Intl.DateTimeFormat()
+Intl.DateTimeFormat(locales)
+Intl.DateTimeFormat(locales, options)
 ```
+
+> **Note:** `Intl.DateTimeFormat()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Intl.DateTimeFormat` instance. However, there's a special behavior when it's called without `new` and the `this` value is another `Intl.DateTimeFormat` instance; see [Return value](#return_value).
 
 ### Parameters
 
 - `locales` {{optional_inline}}
 
-  - : A string with a BCP 47 language tag, or an array of such strings. To use the
-    browser's default locale, omit this field, pass `undefined`, or pass an empty array. Unicode extension are supported
-    (for example `"en-US-u-ca-buddhist"`). For the general form and
-    interpretation of the `locales` argument, see the
-    {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page. The following Unicode
-    extension keys are allowed:
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument). The following Unicode extension keys are allowed:
 
     - `nu`
       - : Numbering system. Possible values include: `"arab"`,
@@ -50,6 +41,7 @@ new Intl.DateTimeFormat(locales, options)
         `"mymr"`, `"orya"`, `"tamldec"`,
         `"telu"`, `"thai"`, `"tibt"`.
     - `ca`
+
       - : Calendar. Possible values include: `"buddhist"`,
         `"chinese"`, `"coptic"`, `"dangi"`,
         `"ethioaa"`, `"ethiopic"`, `"gregory"`,
@@ -96,6 +88,7 @@ new Intl.DateTimeFormat(locales, options)
         > `hour`, `month`, etc.).
 
     - `calendar`
+
       - : Calendar. Possible values include: `"buddhist"`,
         `"chinese"`, `"coptic"`, `"dangi"`,
         `"ethioaa"`, `"ethiopic"`, `"gregory"`,
@@ -119,16 +112,16 @@ new Intl.DateTimeFormat(locales, options)
     - `numberingSystem`
       - : Numbering System. Possible values include: `"arab"`,
         `"arabext"`, `"bali"`, `"beng"`,
-        `"deva"`, `"fullwide"`, " `gujr`",
-        `"guru"`, `"hanidec"`, `"khmr"`, "
-        `knda`", `"laoo"`, `"latn"`,
+        `"deva"`, `"fullwide"`, `"gujr"`,
+        `"guru"`, `"hanidec"`, `"khmr"`,
+        `"knda"`, `"laoo"`, `"latn"`,
         `"limb"`, `"mlym"`, `"mong"`,
         `"mymr"`, `"orya"`, `"tamldec"`, `"telu"`, `"thai"`, `"tibt"`.
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are
         `"lookup"` and `"best fit"`; the default is
         `"best fit"`. For information about this option, see the
-        {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
+        {{jsxref("Global_Objects/Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
     - `timeZone`
       - : The time zone to use. The only value implementations must recognize is
         `"UTC"`; the default is the runtime's default time zone.
@@ -231,7 +224,6 @@ new Intl.DateTimeFormat(locales, options)
       - : The number of digits used to represent fractions of a second (any
         additional digits are truncated). Possible values are:
 
-        - `0` (Fractional part dropped.)
         - `1` (Fractional part represented as 1 digit. For
           example, 736 is formatted as `7`.)
         - `2` (Fractional part represented as 2 digits. For
@@ -257,6 +249,35 @@ new Intl.DateTimeFormat(locales, options)
     {{jsxref("undefined")}}, then `year`, `month`, and
     `day` are assumed to be `"numeric"`.
 
+### Return value
+
+A new `Intl.DateTimeFormat` object.
+
+> **Note:** The text below describes behavior that is marked by the specification as "optional". It may not work in all environments. Check the [browser compatibility table](#browser_compatibility).
+
+Normally, `Intl.DateTimeFormat()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), and a new `Intl.DateTimeFormat` instance is returned in both cases. However, if the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value is an object that is [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) `Intl.DateTimeFormat` (doesn't necessarily mean it's created via `new Intl.DateTimeFormat`; just that it has `Intl.DateTimeFormat.prototype` in its prototype chain), then the value of `this` is returned instead, with the newly created `Intl.DateTimeFormat` object hidden in a `[Symbol(IntlLegacyConstructedSymbol)]` property (a unique symbol that's reused between instances).
+
+```js
+const formatter = Intl.DateTimeFormat.call(
+  { __proto__: Intl.DateTimeFormat.prototype },
+  "en-US",
+  { dateStyle: "full" },
+);
+console.log(Object.getOwnPropertyDescriptors(formatter));
+// {
+//   [Symbol(IntlLegacyConstructedSymbol)]: {
+//     value: DateTimeFormat [Intl.DateTimeFormat] {},
+//     writable: false,
+//     enumerable: false,
+//     configurable: false
+//   }
+// }
+```
+
+Note that there's only one actual `Intl.DateTimeFormat` instance here: the one hidden in `[Symbol(IntlLegacyConstructedSymbol)]`. Calling the [`format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format) and [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions) methods on `formatter` would correctly use the options stored in that instance, but calling all other methods (e.g. [`formatRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange)) would fail: "TypeError: formatRange method called on incompatible Object", because those methods don't consult the hidden instance's options.
+
+This behavior, called `ChainDateTimeFormat`, does not happen when `Intl.DateTimeFormat()` is called without `new` but with `this` set to anything else that's not an `instanceof Intl.DateTimeFormat`. If you call it directly as `Intl.DateTimeFormat()`, the `this` value is [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl), and a new `Intl.DateTimeFormat` instance is created normally.
+
 ## Examples
 
 ### Using DateTimeFormat
@@ -270,27 +291,27 @@ const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // toLocaleString without arguments depends on the implementation,
 // the default locale, and the default time zone
 console.log(new Intl.DateTimeFormat().format(date));
-// → "12/19/2012" if run with en-US locale (language) and time zone America/Los_Angeles (UTC-0800)
+// "12/19/2012" if run with en-US locale (language) and time zone America/Los_Angeles (UTC-0800)
 ```
 
 ### Using timeStyle and dateStyle
 
 ```js
-const shortTime = new Intl.DateTimeFormat("en" , {
-  timeStyle: "short"
+const shortTime = new Intl.DateTimeFormat("en", {
+  timeStyle: "short",
 });
-console.log(shortTime.format(Date.now())); // "13:31 AM"
+console.log(shortTime.format(Date.now())); // "1:31 PM"
 
-const shortDate = new Intl.DateTimeFormat("en" , {
-  dateStyle: "short"
+const shortDate = new Intl.DateTimeFormat("en", {
+  dateStyle: "short",
 });
 console.log(shortDate.format(Date.now())); // "07/07/20"
 
-const mediumTime = new Intl.DateTimeFormat("en" , {
+const mediumTime = new Intl.DateTimeFormat("en", {
   timeStyle: "medium",
-  dateStyle: "short"
+  dateStyle: "short",
 });
-console.log(mediumTime.format(Date.now())); // "07/07/20, 13:31:55 AM"
+console.log(mediumTime.format(Date.now())); // "07/07/20, 1:31:55 PM"
 ```
 
 ### Using dayPeriod
@@ -300,29 +321,35 @@ Use the `dayPeriod` option to output a string for the times of day ("in the morn
 ```js
 const date = Date.UTC(2012, 11, 17, 4, 0, 42);
 
-console.log(new Intl.DateTimeFormat('en-GB', {
-  hour: 'numeric',
-  hourCycle: 'h12',
-  dayPeriod: 'short', 
-  timeZone: 'UTC',
-}).format(date));
-// > 4 at night"  (same formatting in en-GB for all dayPeriod values)
+console.log(
+  new Intl.DateTimeFormat("en-GB", {
+    hour: "numeric",
+    hourCycle: "h12",
+    dayPeriod: "short",
+    timeZone: "UTC",
+  }).format(date),
+);
+// 4 at night"  (same formatting in en-GB for all dayPeriod values)
 
-console.log(new Intl.DateTimeFormat('fr', {
-  hour: 'numeric',
-  hourCycle: 'h12',
-  dayPeriod: 'narrow',
-  timeZone: 'UTC',
-}).format(date));
-// > "4 mat."  (same output in French for both narrow/short dayPeriod)
+console.log(
+  new Intl.DateTimeFormat("fr", {
+    hour: "numeric",
+    hourCycle: "h12",
+    dayPeriod: "narrow",
+    timeZone: "UTC",
+  }).format(date),
+);
+// "4 mat."  (same output in French for both narrow/short dayPeriod)
 
-console.log(new Intl.DateTimeFormat('fr', {
-  hour: 'numeric',
-  hourCycle: 'h12',
-  dayPeriod: 'long',
-  timeZone: 'UTC',
-}).format(date));
-// > "4 du matin"
+console.log(
+  new Intl.DateTimeFormat("fr", {
+    hour: "numeric",
+    hourCycle: "h12",
+    dayPeriod: "long",
+    timeZone: "UTC",
+  }).format(date),
+);
+// "4 du matin"
 ```
 
 ### Using timeZoneName
@@ -331,24 +358,31 @@ Use the `timeZoneName` option to output a string for the timezone ("GMT", "Pacif
 
 ```js
 const date = Date.UTC(2021, 11, 17, 3, 0, 42);
-const timezoneNames = ['short', 'long', 'shortOffset', 'longOffset', 'shortGeneric', 'longGeneric']
+const timezoneNames = [
+  "short",
+  "long",
+  "shortOffset",
+  "longOffset",
+  "shortGeneric",
+  "longGeneric",
+];
 
 for (const zoneName of timezoneNames) {
   // Do something with currentValue
-  const formatter = new Intl.DateTimeFormat('en-US', {
-    timeZone: 'America/Los_Angeles',
+  const formatter = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Los_Angeles",
     timeZoneName: zoneName,
   });
   console.log(`${zoneName}: ${formatter.format(date)}`);
 }
 
-// expected output:
-// > "short: 12/16/2021, PST"
-// > "long: 12/16/2021, Pacific Standard Time"
-// > "shortOffset: 12/16/2021, GMT-8"
-// > "longOffset: 12/16/2021, GMT-08:00"
-// > "shortGeneric: 12/16/2021, PT"
-// > "longGeneric: 12/16/2021, Pacific Time"
+// Logs:
+// short: 12/16/2021, PST
+// long: 12/16/2021, Pacific Standard Time
+// shortOffset: 12/16/2021, GMT-8
+// longOffset: 12/16/2021, GMT-08:00
+// shortGeneric: 12/16/2021, PT
+// longGeneric: 12/16/2021, Pacific Time
 ```
 
 ## Specifications

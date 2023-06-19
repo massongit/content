@@ -1,12 +1,10 @@
 ---
 title: Server
 slug: Web/HTTP/Headers/Server
-tags:
-  - HTTP
-  - Reference
-  - header
+page-type: http-header
 browser-compat: http.headers.Server
 ---
+
 {{HTTPSidebar}}
 
 The **`Server`** header describes the

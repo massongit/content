@@ -1,11 +1,9 @@
 ---
 title: format-number
 slug: Web/XPath/Functions/format-number
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `format-number` function evaluates a number and returns a string representing the number in a given format.
 

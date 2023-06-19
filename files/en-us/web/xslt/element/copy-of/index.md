@@ -1,13 +1,9 @@
 ---
 title: <xsl:copy-of>
 slug: Web/XSLT/Element/copy-of
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - copy-of
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `<xsl:copy-of>` element makes a deep copy (including descendant nodes) of whatever the select attribute specifies to the output document.
 

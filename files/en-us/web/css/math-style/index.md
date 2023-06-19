@@ -1,14 +1,10 @@
 ---
 title: math-style
 slug: Web/CSS/math-style
-tags:
-  - CSS
-  - MathML
-  - Property
-  - Reference
-  - math-style
+page-type: css-property
 browser-compat: css.properties.math-style
 ---
+
 {{CSSRef}}
 
 The `math-style` property indicates whether MathML equations should render with normal or compact height.

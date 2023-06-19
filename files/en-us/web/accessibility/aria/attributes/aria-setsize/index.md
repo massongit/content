@@ -1,20 +1,15 @@
 ---
 title: aria-setsize
 slug: Web/Accessibility/ARIA/Attributes/aria-setsize
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-setsize
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-setsize
 ---
+
 The `aria-setsize` attribute defines the number of items in the current set of listitems or treeitems when not all items in the set are present in the DOM.
 
 ## Description
 
-Browsers automatically calculate the set size and position for each item in a group of items, like the number of {{HTMLelement('li')}}s in a list, buttons in a same-named group of [radio buttons](/en-US/docs/Web/HTML/Element/input/radio), and {{HTMLelement('option')}}}s in a {{HTMLelement('select')}}. Assistive technologies, like screen readers, take advantage of this state management to report set sizes to the user.
+Browsers automatically calculate the set size and position for each item in a group of items, like the number of {{HTMLelement('li')}}s in a list, buttons in a same-named group of [radio buttons](/en-US/docs/Web/HTML/Element/input/radio), and {{HTMLelement('option')}}s in a {{HTMLelement('select')}}. Assistive technologies, like screen readers, take advantage of this state management to report set sizes to the user.
 
 When the DOM is not complete, the browser calculation of the number of items in a set can be incorrect. When only a subset of items, such as list items, are loaded into the DOM, the browser calculates the number of items based only on those present. The `aria-setsize` attribute should be used to override the browser's incorrect count. It defines the number of items in the current set of listitems or treeitems had the entire set been loaded.
 
@@ -37,7 +32,7 @@ In a menu, `aria-setsize` is set on all [`menuitem`](/en-US/docs/Web/Accessibili
 The following example shows items 5 through 8 in a set of 16.
 
 ```html
-<h2 id="label_fruit"> Available Fruit </h2>
+<h2 id="label_fruit">Available Fruit</h2>
 <ul role="listbox" aria-labelledby="label_fruit">
   <li role="option" aria-setsize="16" aria-posinset="5">apples</li>
   <li role="option" aria-setsize="16" aria-posinset="6">bananas</li>
@@ -65,8 +60,8 @@ To orient the user, assistive technologies would list the bananas above as "item
 Used in roles:
 
 - [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role)
-- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/associationlistitemkey_role)
-- [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Roles/associationlistitemvalue_role)
+- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`comment`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role)
 - [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
 - [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)

@@ -1,13 +1,10 @@
 ---
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
-tags:
-  - HTTP
-  - HTTP Status
-  - Range Requests
-  - Success
+page-type: http-status-code
 browser-compat: http.status.206
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`206 Partial Content`** success status response code
@@ -23,7 +20,7 @@ If several ranges are sent back, the {{HTTPHeader("Content-Type")}} is set to
 
 ## Status
 
-```
+```http
 206 Partial Content
 ```
 

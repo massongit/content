@@ -1,18 +1,10 @@
 ---
 title: repeating-conic-gradient()
 slug: Web/CSS/gradient/repeating-conic-gradient
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - gradient
+page-type: css-function
 browser-compat: css.types.image.gradient.repeating-conic-gradient
 ---
+
 {{CSSRef}}
 
 The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of a repeating gradient (rather than a {{cssxref("gradient/conic-gradient","single gradient")}}) with color transitions rotated around a center point (rather than {{cssxref("gradient/repeating-radial-gradient","radiating from the center")}}).
@@ -27,9 +19,9 @@ The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-U
    centered in the upper left quadrant,
    offset by 3degrees so there is no up/down straight line */
 background: repeating-conic-gradient(
-    from 3deg at 25% 25%,
-    hsl(200, 100%, 50%) 0deg 15deg,
-    hsl(200, 100%, 60%) 10deg 30deg
+  from 3deg at 25% 25%,
+  hsl(200, 100%, 50%) 0deg 15deg,
+  hsl(200, 100%, 60%) 10deg 30deg
 );
 ```
 
@@ -109,7 +101,7 @@ While you can mix and match different angle units, don't. It makes CSS hard to r
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. While it is possible to create pie charts, checkerboards, and other effects with conic gradients, CSS images provide no native way to assign alternative text, and therefore the image represented by the conic gradient will not be accessible to screen reader users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Examples
@@ -129,8 +121,7 @@ div {
 
 ```css
 div {
-  background-image:
-     repeating-conic-gradient(#fff 0 9deg, #000 9deg 18deg);
+  background-image: repeating-conic-gradient(#fff 0 9deg, #000 9deg 18deg);
 }
 ```
 
@@ -155,7 +146,12 @@ div {
 div {
   background: repeating-conic-gradient(
     from 3deg at 25% 25%,
-    green, blue 2deg 5deg, green, yellow 15deg 18deg, green 20deg);
+    green,
+    blue 2deg 5deg,
+    green,
+    yellow 15deg 18deg,
+    green 20deg
+  );
 }
 ```
 

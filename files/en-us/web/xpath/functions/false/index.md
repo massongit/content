@@ -1,11 +1,9 @@
 ---
-title: 'false'
+title: "false"
 slug: Web/XPath/Functions/false
-tags:
-  - XSLT
-  - XSLT_Reference
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `false` function returns boolean false.
 

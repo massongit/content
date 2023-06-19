@@ -1,18 +1,14 @@
 ---
 title: Viewport-Width
 slug: Web/HTTP/Headers/Viewport-Width
-tags:
-  - Viewport-Width
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Deprecated
-  - Non-standard
-  -  Experimental
+page-type: http-header
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Viewport-Width
 ---
-{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
+
+{{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_header}}{{Non-standard_Header}}
 
 The **`Viewport-Width`** [device client hint](/en-US/docs/Web/HTTP/Client_hints) request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}. The value is rounded up to the smallest following integer (i.e. ceiling value).
 
@@ -83,4 +79,4 @@ Viewport-Width: 320
   - {{HTTPHeader("Width")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

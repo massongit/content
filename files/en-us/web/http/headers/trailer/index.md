@@ -1,14 +1,10 @@
 ---
 title: Trailer
 slug: Web/HTTP/Headers/Trailer
-tags:
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
-  - Payload header
+page-type: http-header
 browser-compat: http.headers.Trailer
 ---
+
 {{HTTPSidebar}}
 
 The **Trailer** response header allows the sender to include additional

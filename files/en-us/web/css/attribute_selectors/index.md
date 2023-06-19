@@ -1,14 +1,10 @@
 ---
 title: Attribute selectors
 slug: Web/CSS/Attribute_selectors
-tags:
-  - Attribute selectors
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
+page-type: css-selector
 browser-compat: css.selectors.attribute
 ---
+
 {{CSSRef}}
 
 The CSS **attribute selector** matches elements based on the presence or value of a given attribute.
@@ -20,7 +16,8 @@ a[title] {
 }
 
 /* <a> elements with an href matching "https://example.org" */
-a[href="https://example.org"] {
+a[href="https://example.org"]
+{
   color: green;
 }
 
@@ -147,7 +144,7 @@ div[lang="pt"] {
 }
 
 /* All divs in Chinese are red, whether
-   simplified (zh-CN) or traditional (zh-TW). */
+   simplified (zh-Hans-CN) or traditional (zh-Hant-TW). */
 div[lang|="zh"] {
   color: red;
 }
@@ -156,7 +153,7 @@ div[lang|="zh"] {
    `data-lang` are purple. */
 /* Note: You could also use hyphenated attributes
    without double quotes */
-div[data-lang="zh-TW"] {
+div[data-lang="zh-Hant-TW"] {
   color: purple;
 }
 ```
@@ -166,9 +163,9 @@ div[data-lang="zh-TW"] {
 ```html
 <div lang="en-us en-gb en-au en-nz">Hello World!</div>
 <div lang="pt">Olá Mundo!</div>
-<div lang="zh-CN">世界您好！</div>
-<div lang="zh-TW">世界您好！</div>
-<div data-lang="zh-TW">世界您好！</div>
+<div lang="zh-Hans-CN">世界您好！</div>
+<div lang="zh-Hant-TW">世界您好！</div>
+<div data-lang="zh-Hant-TW">世界您好！</div>
 ```
 
 #### Result
@@ -177,7 +174,7 @@ div[data-lang="zh-TW"] {
 
 ### HTML ordered lists
 
-The HTML specification requires the {{htmlattrxref("type", "input")}} attribute to be matched case-insensitively because it is primarily used in the {{HTMLElement("input")}} element.
+The HTML specification requires the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute to be matched case-insensitively because it is primarily used in the {{HTMLElement("input")}} element.
 Note that if the modifiers are not supported by the user agent, then the selector will not match.
 
 #### CSS
@@ -209,7 +206,9 @@ ol[type="c" i] {
 
 ```html
 <ol type="A">
-  <li>Red background for case-insensitive matching (default for the type selector)</li>
+  <li>
+    Red background for case-insensitive matching (default for the type selector)
+  </li>
 </ol>
 <ol type="b">
   <li>Lime background if `s` modifier is supported (case-sensitive match)</li>
@@ -218,7 +217,9 @@ ol[type="c" i] {
   <li>Grey background if `s` modifier is supported (case-sensitive match)</li>
 </ol>
 <ol type="C">
-  <li>Green background if `i` modifier is supported (case-insensitive match)</li>
+  <li>
+    Green background if `i` modifier is supported (case-insensitive match)
+  </li>
 </ol>
 ```
 

@@ -1,14 +1,7 @@
 ---
 title: <display-inside>
 slug: Web/CSS/display-inside
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Display
-  - Data Type
-  - Reference
-  - display-inside
-spec-urls: https://drafts.csswg.org/css-display/#typedef-display-inside
+page-type: css-type
 browser-compat:
   - css.properties.display.multi-keyword_values
   - css.properties.display.flow-root
@@ -16,7 +9,9 @@ browser-compat:
   - css.properties.display.grid
   - css.properties.display.flex
   - css.properties.display.ruby_values
+spec-urls: https://drafts.csswg.org/css-display/#typedef-display-inside
 ---
+
 {{CSSRef}}
 
 These keywords specify the element's inner {{CSSxRef("display")}} type, which defines the type of formatting context that lays out its contents (assuming it is a non-replaced element). These keywords are used as values of the `display` property, and can be used for legacy purposes as a single keyword, or as defined in the Level 3 specification alongside a value from the {{CSSxRef("&lt;display-outside&gt;")}} keywords.
@@ -67,18 +62,18 @@ In this example the parent box has been given `display: flow-root` and so establ
 
 ```css
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
-    display: flow-root;
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
+  display: flow-root;
 }
 
 .float {
-    float: left;
-    width: 200px;
-    height: 150px;
-    background-color: white;
-    border:1px solid black;
-    padding: 10px;
+  float: left;
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 

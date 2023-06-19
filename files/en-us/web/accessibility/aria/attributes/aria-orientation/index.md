@@ -1,15 +1,10 @@
 ---
 title: aria-orientation
 slug: Web/Accessibility/ARIA/Attributes/aria-orientation
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-orientation
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-orientation
 ---
+
 The `aria-orientation` attribute indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
 
 ## Description

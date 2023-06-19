@@ -1,11 +1,8 @@
 ---
 title: str:split()
 slug: Web/EXSLT/str/split
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `str:split()` splits a string using a pattern string to determine where the splits should occur, returning a node-set containing the resulting strings.
@@ -44,7 +41,7 @@ Returns a node set like:
 
 ## Specifications
 
-[EXSLT - STR:SPLIT](http://exslt.org/str/functions/split/index.html)
+[EXSLT - STR:SPLIT](https://exslt.github.io/str/functions/split/index.html)
 
 ## See also
 
