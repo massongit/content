@@ -71,7 +71,7 @@ The `border` shorthand is especially useful when you want all four borders to be
 
 Borders and [outlines](/en-US/docs/Web/CSS/outline) are very similar. However, outlines differ from borders in the following ways:
 
-- Outlines never take up space, as they are drawn outside of an element's content.
+- Outlines never take up space, as they are drawn outside of an element‘s content.
 - According to the spec, outlines don't have to be rectangular, although they usually are.
 
 ## Formal definition
