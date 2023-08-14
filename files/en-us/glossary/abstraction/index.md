@@ -15,12 +15,12 @@ Abstraction in {{Glossary("computer programming")}} is a way to reduce complexit
 - Can change the internal implementation of a class independently without affecting the user.
 - Helps to increase the security of an application or program as only important details are provided to the user.
 
-## Example
+## Example  
 
 ```js
 class ImplementAbstraction {
   // method to set values of internal members
-  set(x, y) {
+  set(x, y){
     this.a = x;
     this.b = y;
   }
