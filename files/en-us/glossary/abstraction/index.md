@@ -20,7 +20,7 @@ Abstraction in {{Glossary("computer programming")}} is a way to reduce complexit
 ```js
 class ImplementAbstraction {
   // method to set values of internal members
-  set(x, y){
+  set(x, y) {
     this.a = x;
     this.b = y;
   }
