@@ -29,9 +29,9 @@ To get started, see:
 - [About Emscripten](https://emscripten.org/docs/introducing_emscripten/about_emscripten.html) for an introduction including high-level details.
 - [Download and Install](https://emscripten.org/docs/getting_started/downloads.html) for installing the toolchain.
 - [Emscripten Tutorial](https://emscripten.org/docs/getting_started/Tutorial.html) for a tutorial to teach you how to get started.
-+ abc
-+ defg
-+ hijk
+- abc
+- defg
+- hijk
 
 ## Examples
 
