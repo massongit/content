@@ -25,7 +25,7 @@ class ImplementAbstraction {
     this.b = y;
   }
 
-  display(){
+  display() {
     console.log(`a = ${this.a}`);
     console.log(`b = ${this.b}`);
   }
