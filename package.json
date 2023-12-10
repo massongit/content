@@ -22,7 +22,7 @@
     "content": "env-cmd --silent cross-env CONTENT_ROOT=files yari-tool",
     "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files yari-filecheck --cwd=.",
     "fix:fm": "node scripts/front-matter_linter.js --fix true",
-    "fix:js": "prettier -w \"**/*.(m)?js\"",
+    "fix:js": "prettier -w /home/koder/GitHub/mdn/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html",
     "fix:json": "prettier -w \"**/*.json(c)?\"",
     "fix:md": "markdownlint-cli2 --fix \"**/*.md\" && prettier -w \"**/*.md\"",
     "fix:yml": "prettier -w \"**/*.yml\"",
