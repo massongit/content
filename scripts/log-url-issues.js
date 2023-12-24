@@ -20,6 +20,7 @@ const rootDir = getRootDir();
 const argLength = process.argv.length;
 const deletedSlugs = [];
 const fragmentDetails = [];
+let isAllOk = true;
 
 function getDeletedSlugs() {
   // git status --short --porcelain
@@ -96,6 +97,7 @@ for await (const filePath of walkSync(getRootDir())) {
 
       // check deleted links
       for (const slug of deletedSlugs) {
+        isAllOk = false;
         const locations = getLocations(
           content,
           new RegExp(`/${slug}[)># \"']`, "mig"),
@@ -111,6 +113,7 @@ for await (const filePath of walkSync(getRootDir())) {
 
       // check broken URL fragment
       for (const fragment of fragmentDetails) {
+        isAllOk = false;
         const locations = getLocations(content, fragment);
         // check fragments in the same file
         const urlParts = fragment.split("#");
@@ -130,4 +133,8 @@ for await (const filePath of walkSync(getRootDir())) {
       throw e;
     }
   }
+}
+
+if(!isAllOk) {
+ process.exit(1);
 }
