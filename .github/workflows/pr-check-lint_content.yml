@@ -125,6 +125,8 @@ jobs:
             -name="mdn-linter" \
             -f=diff \
             -f.diff.strip=1 \
+            -tee \
+            --log-level=debug \
             -reporter=github-pr-review < "${TMPFILE}"
 
       - name: Add reviews for markdownlint errors
