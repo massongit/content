@@ -140,7 +140,9 @@ jobs:
             -efm="%f:%l %m" \
             -name="markdownlint" \
             -diff="git diff" \
-            -reporter="github-pr-review"
+            -reporter="github-pr-review" \
+            -tee \
+            --log-level=debug \
 
       - name: Fail if any issues pending
         if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true' || env.FM_LINT_FAILED == 'true'
